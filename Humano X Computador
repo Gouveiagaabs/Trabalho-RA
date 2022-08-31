@@ -1,0 +1,48 @@
+import os
+import random
+
+jogadas = ["pedra", "papel", "tesoura"]
+contador = 0
+placarPlayer = 0
+placarComputador = 0
+while contador<5:
+    jogadorEscolha =\
+        input("Pedra, Papel ou tesoura? ")
+    computadorEscolha =\
+        (random.choice(jogadas))
+    print("O computador escolheu: " + computadorEscolha)
+    if jogadorEscolha == "pedra" and computadorEscolha == "tesoura":
+        placarPlayer = placarPlayer + 1
+        print("O player venceu esta rodada.")
+    elif jogadorEscolha == "pedra" and computadorEscolha == "papel":
+        placarComputador = placarComputador + 1
+        print("O computador venceu esta rodada.")
+    elif jogadorEscolha == "pedra"  and computadorEscolha == "pedra":
+        print("Esta rodada deu empate.")
+    elif jogadorEscolha == "tesoura" and computadorEscolha == "tesoura":
+        print("Esta rodada deu empate.")
+    elif jogadorEscolha == "tesoura" and computadorEscolha == "papel":
+        placarPlayer = placarPlayer + 1
+        print("O player venceu esta rodada.")
+    elif jogadorEscolha == "tesoura" and computadorEscolha == "pedra":
+        placarComputador = placarComputador + 1
+        print("O computador venceu esta rodada.")
+    elif jogadorEscolha == "papel" and computadorEscolha == "papel":
+        print("Esta rodada deu empate.")
+    elif jogadorEscolha == "papel" and computadorEscolha == "pedra":
+        placarPlayer = placarPlayer + 1
+        print("O player venceu esta rodada.")
+    elif jogadorEscolha == "papel" and computadorEscolha == "tesoura":
+        placarComputador = placarComputador + 1
+        print("O computador venceu esta rodada.")
+    print("Atualmente o placar é: [Player = " + str(placarPlayer) + "] e [Computador = " + str(placarComputador) + "]")
+    decisao =\
+        input("Digite 1 para a próxima rodada ou digite 2 para finalizar e ver os vencedores. ")
+    if decisao == "2":
+        contador = 5
+        if placarComputador < placarPlayer:
+            print("Quem venceu este game foi você. Meus parabéns!")
+        elif placarComputador == placarPlayer:
+            print("O jogo deu empate, que curioso!")
+        elif placarComputador > placarPlayer:
+            print("Quem venceu este game foi o computador. Mais sorte na próxima!")
