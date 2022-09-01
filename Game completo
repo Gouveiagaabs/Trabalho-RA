@@ -1,0 +1,43 @@
+import random
+
+print("Bem vindos ao Pedra, papel ou tesoura.")
+
+modalidade =\
+    float(input("Escolha a modalidade do game. 1 - Para jogador x jogador, 2 - Para Computador x Computador e 3 - Para Jogador x Computador. "))
+contador = 0
+if modalidade == 1:
+    print("Você escolheu a modalidade de jogador x jogador.")
+    placarJogadorum = 0
+    placarJogadordois = 0
+    namePlayerum =\
+        input("Digite o nome do jogador número um: ")
+    namePlayerdois =\
+        input("Digite o nome do jogador número dois: ")
+    while contador < 1:
+        print("Digitem 1 para pedra, 2 para papel ou 3 para tesoura.")
+        jogadaUm = input("Player um, faça sua jogada. Pedra, papel ou tesoura? ")
+        jogadaDois = input("Player dois, faça sua jogada. Pedra, papel ou tesoura? ")
+        if jogadorUm == 1 and jogadaDois == 3:
+            placarJogadorum = placarJogadorum + 1
+            print("O player venceu esta rodada.")
+        elif jogadorEscolha == "pedra" and computadorEscolha == "papel":
+            placarComputador = placarComputador + 1
+            print("O computador venceu esta rodada.")
+        elif jogadorEscolha == "pedra" and computadorEscolha == "pedra":
+            print("Esta rodada deu empate.")
+        elif jogadorEscolha == "tesoura" and computadorEscolha == "tesoura":
+            print("Esta rodada deu empate.")
+        elif jogadorEscolha == "tesoura" and computadorEscolha == "papel":
+            placarPlayer = placarPlayer + 1
+            print("O player venceu esta rodada.")
+        elif jogadorEscolha == "tesoura" and computadorEscolha == "pedra":
+            placarComputador = placarComputador + 1
+            print("O computador venceu esta rodada.")
+        elif jogadorEscolha == "papel" and computadorEscolha == "papel":
+            print("Esta rodada deu empate.")
+        elif jogadorEscolha == "papel" and computadorEscolha == "pedra":
+            placarPlayer = placarPlayer + 1
+            print("O player venceu esta rodada.")
+        elif jogadorEscolha == "papel" and computadorEscolha == "tesoura":
+            placarComputador = placarComputador + 1
+            print("O computador venceu esta rodada.")
