@@ -42,7 +42,410 @@ while contadorGeral < 1:
                 time.sleep(1)
                 print("\n" * 1)
                 print(namePlayerum + " venceu esta rodada.")
+            elif jogadaUm == 1 and jogadaDois == 2:import random
+import time
+
+print("Bem vindos ao Pedra, papel ou tesoura.")
+contadorGeral = 0
+while contadorGeral < 1:
+    modalidade =\
+        float(input("Escolha a modalidade do game. 1 - Para jogador x jogador, 2 - Para Computador x Computador e 3 - Para Jogador x Computador. "))
+    contador = 0
+    contadorSegundo = 0
+    contadorTerceiro = 0
+    if modalidade == 1:
+        print("Você escolheu a modalidade de jogador x jogador.")
+        time.sleep(5)
+        print("\n" * 130)
+        placarJogadorum = 0
+        placarJogadordois = 0
+        vitoriasUm = 0
+        resetPontos = 0
+        vitoriasDois = 0
+        namePlayerum =\
+            input("Digite o nome do jogador número um: ")
+        namePlayerdois =\
+            input("Digite o nome do jogador número dois: ")
+        time.sleep(1)
+        print("\n" * 150)
+        while contador < 1:
+            if resetPontos == 1:
+                placarJogadordois = placarJogadordois - placarJogadordois
+                placarJogadorum = placarJogadorum - placarJogadorum
+                resetPontos = resetPontos - 1
+            print("Digitem 1 para pedra, 2 para papel ou 3 para tesoura.")
+            jogadaUm = int(input(namePlayerum + ", faça sua jogada. Pedra, papel ou tesoura? "))
+            print("\n" * 150)
+            time.sleep(1)
+            print("Digitem 1 para pedra, 2 para papel ou 3 para tesoura.")
+            jogadaDois = int(input(namePlayerdois + ", faça sua jogada. Pedra, papel ou tesoura? "))
+            time.sleep(3)
+            if jogadaUm == 1 and jogadaDois == 3:
+                placarJogadorum = placarJogadorum + 1
+                print("\n" * 1)
+                print(namePlayerum + " escolheu pedra e " + namePlayerdois + " escolheu tesoura.")
+                time.sleep(1)
+                print("\n" * 1)
+                print(namePlayerum + " venceu esta rodada.")
             elif jogadaUm == 1 and jogadaDois == 2:
+                placarJogadordois = placarJogadordois + 1
+                print("\n" * 1)
+                print(namePlayerum + " escolheu pedra e " + namePlayerdois + " escolheu papel.")
+                time.sleep(1)
+                print("\n" * 1)
+                print(namePlayerdois + " venceu esta rodada.")
+            elif jogadaUm == 1 and jogadaDois == 1:
+                print("\n" * 1)
+                print(namePlayerum + " escolheu pedra e " + namePlayerdois + " escolheu pedra.")
+                time.sleep(1)
+                print("\n" * 1)
+                print("EMPATE!")
+            elif jogadaUm == 2 and jogadaDois == 2:
+                print("\n" * 1)
+                print(namePlayerum + " escolheu papel e " + namePlayerdois + " escolheu papel.")
+                time.sleep(1)
+                print("\n" * 1)
+                print("EMPATE!")
+            elif jogadaUm == 2 and jogadaDois == 1:
+                placarJogadorum = placarJogadorum + 1
+                print("\n" * 1)
+                print(namePlayerum + " escolheu papel e " + namePlayerdois + " escolheu pedra.")
+                time.sleep(1)
+                print("\n" * 1)
+                print(namePlayerum + " venceu esta rodada.")
+            elif jogadaUm == 2 and jogadaDois == 3:
+                placarJogadordois = placarJogadordois + 1
+                print("\n" * 1)
+                print(namePlayerum + " escolheu papel e " + namePlayerdois + " escolheu tesoura.")
+                time.sleep(1)
+                print("\n" * 1)
+                print(namePlayerdois + " venceu esta rodada.")
+            elif jogadaUm == 3 and jogadaDois == 3:
+                print("\n" * 1)
+                print(namePlayerum + " escolheu tesoura e " + namePlayerdois + " escolheu tesoura.")
+                time.sleep(1)
+                print("\n" * 1)
+                print("EMPATE!")
+            elif jogadaUm == 3 and jogadaDois == 1:
+                placarJogadordois = placarJogadordois + 1
+                print("\n" * 1)
+                print(namePlayerum + " escolheu tesoura e " + namePlayerdois + " escolheu pedra.")
+                time.sleep(1)
+                print("\n" * 1)
+                print(namePlayerdois + " venceu esta rodada.")
+            elif jogadaUm == 3 and jogadaDois == 2:
+                placarJogadorum = placarJogadorum + 1
+                print("\n" * 1)
+                print(namePlayerum + " escolheu tesoura e " + namePlayerdois + " escolheu papel.")
+                time.sleep(1)
+                print("\n" * 1)
+                print(namePlayerum + " venceu esta rodada.")
+            else:
+                time.sleep(1)
+                print("\n" * 130)
+                print("Jogada Inválida!")
+            time.sleep(3)
+            print("\n" * 130)
+            print("Atualmente, a pontuação é: [" + namePlayerum + ": " + str(placarJogadorum) + "] e [" + namePlayerdois + ": " + str(placarJogadordois) + "]")
+            time.sleep(3)
+            if placarJogadorum >= 3 and placarJogadordois <= (placarJogadorum - 2):
+                resetPontos = resetPontos + 1
+                vitoriasUm = vitoriasUm + 1
+                time.sleep(1)
+                print("\n" * 1)
+                print(namePlayerum + " venceu este game.")
+                modEscolha =\
+                    int(input("Pressione 1 para encerrar e escolher outra modalidade ou 2 para continuar o game atual."))
+                if modEscolha == 1:
+                    contador = contador + 1
+                    time.sleep(3)
+                    print("\n" * 130)
+                if modEscolha == 2:
+                    time.sleep(3)
+                    print("\n" * 130)
+                    if vitoriasUm <= 1 and vitoriasDois <= 1:
+                        print("[" + namePlayerum + " = " + str(vitoriasUm) + " vitória.]")
+                        print("[" + namePlayerdois + " = " + str(vitoriasDois) + " vitória.]")
+                    elif vitoriasUm > 1 and vitoriasDois <= 1:
+                        print("[" + namePlayerum + " = " + str(vitoriasUm) + " vitórias.]")
+                        print("[" + namePlayerdois + " = " + str(vitoriasDois) + " vitória.]")
+                    elif vitoriasUm <= 1 and vitoriasDois > 1:
+                        print("[" + namePlayerum + " = " + str(vitoriasUm) + " vitória.]")
+                        print("[" + namePlayerdois + " = " + str(vitoriasDois) + " vitórias.]")
+                    elif vitoriasUm > 1 and vitoriasDois > 1:
+                        print("[" + namePlayerum + " = " + str(vitoriasUm) + " vitórias.]")
+                        print("[" + namePlayerdois + " = " + str(vitoriasDois) + " vitórias.]")
+            if placarJogadordois >= 3 and placarJogadorum <= (placarJogadordois - 2):
+                resetPontos = resetPontos + 1
+                vitoriasDois = vitoriasDois + 1
+                time.sleep(1)
+                print("\n" * 1)
+                print(namePlayerdois + " venceu este game.")
+                modEscolha =\
+                    int(input("Pressione 1 para encerrar e escolher outra modalidade ou 2 para continuar o game atual."))
+                if modEscolha == 1:
+                    contador = contador + 1
+                    time.sleep(3)
+                    print("\n" * 130)
+                if modEscolha == 2:
+                    time.sleep(3)
+                    print("\n" * 130)
+                    if vitoriasDois == 1:
+                        print(namePlayerdois + " = " + str(vitoriasDois) + " vitória.")
+                    else:
+                        print(namePlayerdois + " = " + str(vitoriasDois) + " vitórias.")
+    if modalidade == 2:
+        print("Você escolheu a modalidade Computador x Computador")
+        time.sleep(5)
+        print("\n" * 130)
+        itens = ("Pedra", "Papel", "Tesoura")
+        resetPontosdois = 0
+        placarA = 0
+        placarB = 0
+        vitoriasA = 0
+        vitoriasB = 0
+        while contadorSegundo < 1:
+            if resetPontosdois == 1:
+                placarA = placarA - placarA
+                placarB = placarB - placarB
+                resetPontosdois = resetPontosdois - 1
+            computadorAescolha =\
+                (random.choice(itens))
+            computadorBescolha =\
+                (random.choice(itens))
+            print("O Computador A jogou: " + computadorAescolha + ".")
+            time.sleep(3)
+            print("\n" * 1)
+            print("O computador B jogou: " + computadorBescolha + ".")
+            time.sleep(3)
+            print("\n" * 1)
+            if computadorAescolha == "Pedra":
+                if computadorBescolha == "Pedra":
+                    print("EMPATE!")
+                elif computadorBescolha == "Papel":
+                    print("O Computador B venceu a rodada!")
+                    placarB = placarB + 1
+                elif computadorBescolha == "Tesoura":
+                    print("O Computador A venceu a rodada!")
+                    placarA = placarA + 1
+            if computadorAescolha == "Papel":
+                if computadorBescolha == "Pedra":
+                    print("O Computador A venceu a rodada!")
+                    placarA = placarA + 1
+                elif computadorBescolha == "Papel":
+                    print("EMPATE!")
+                elif computadorBescolha == "Tesoura":
+                    print("O Computador B venceu a rodada!")
+                    placarB = placarB + 1
+            if computadorAescolha == "Tesoura":
+                if computadorBescolha == "Pedra":
+                    print("O Computador B venceu a rodada!")
+                    placarB = placarB + 1
+                elif computadorBescolha == "Papel":
+                    print("O Computador A venceu a rodada!")
+                    placarA = placarA + 1
+                elif computadorBescolha == "Tesoura":
+                    print("EMPATE!")
+            time.sleep(3)
+            print("\n" * 130)
+            print("Atualmente, a pontuação é: [Computador A: " + str(placarA) + "] e [Computador B:" + str(placarB) + "]")
+            time.sleep(2)
+            print("\n" * 1)
+            if placarA >= 3 and placarB <= (placarA - 2):
+                resetPontosdois = resetPontosdois + 1
+                vitoriasA = vitoriasA + 1
+                time.sleep(1)
+                print("\n" * 1)
+                print("Computador A venceu este game.")
+                modEscolhadois =\
+                    int(input("Pressione 1 para encerrar e escolher outra modalidade ou 2 para continuar o game atual."))
+                if modEscolhadois == 1:
+                    contadorSegundo = contadorSegundo + 1
+                    time.sleep(3)
+                    print("\n" * 130)
+                if modEscolhadois == 2:
+                    time.sleep(3)
+                    print("\n" * 130)
+                    if vitoriasA <= 1 and vitoriasB <= 1:
+                        print("[Computador A = " + str(vitoriasA) + " vitória.]")
+                        print("[Computador B = " + str(vitoriasB) + " vitória.]")
+                    elif vitoriasA > 1 and vitoriasB <= 1:
+                        print("[Computador A = " + str(vitoriasA) + " vitórias.]")
+                        print("[Computador B = " + str(vitoriasB) + " vitória.]")
+                    elif vitoriasA <= 1 and vitoriasB > 1:
+                        print("[Computador A = " + str(vitoriasA) + " vitória.]")
+                        print("[Computador B = " + str(vitoriasB) + " vitórias.]")
+                    elif vitoriasA > 1 and vitoriasB > 1:
+                        print("[Computador A = " + str(vitoriasA) + " vitórias.]")
+                        print("[Computador B = " + str(vitoriasB) + " vitórias.]")
+            if placarB >= 3 and placarA <= (placarB - 2):
+                resetPontosdois = resetPontosdois + 1
+                vitoriasB = vitoriasB + 1
+                time.sleep(1)
+                print("\n" * 1)
+                print("Computador B venceu este game.")
+                modEscolhadois =\
+                    int(input("Pressione 1 para encerrar e escolher outra modalidade ou 2 para continuar o game atual."))
+                if modEscolhadois == 1:
+                    contadorSegundo = contadorSegundo + 1
+                    time.sleep(3)
+                    print("\n" * 130)
+                if modEscolhadois == 2:
+                    time.sleep(3)
+                    print("\n" * 130)
+                    if vitoriasA <= 1 and vitoriasB <= 1:
+                        print("[Computador A = " + str(vitoriasA) + " vitória.]")
+                        print("[Computador B = " + str(vitoriasB) + " vitória.]")
+                    elif vitoriasA > 1 and vitoriasB <= 1:
+                        print("[Computador A = " + str(vitoriasA) + " vitórias.]")
+                        print("[Computador B = " + str(vitoriasB) + " vitória.]")
+                    elif vitoriasA <= 1 and vitoriasB > 1:
+                        print("[Computador A = " + str(vitoriasA) + " vitória.]")
+                        print("[Computador B = " + str(vitoriasB) + " vitórias.]")
+                    elif vitoriasA > 1 and vitoriasB > 1:
+                        print("[Computador A = " + str(vitoriasA) + " vitórias.]")
+                        print("[Computador B = " + str(vitoriasB) + " vitórias.]")
+    if modalidade == 3:
+        print("Você escolheu a modalidade de jogador x Computador.")
+        time.sleep(5)
+        print("\n" * 130)
+        jogadas = [1, 2, 3]
+        contadorTerceiro = 0
+        placarPlayertres = 0
+        placarComputadortres = 0
+        vitoriasP = 0
+        resetPontostres = 0
+        vitoriasC = 0
+        while contadorTerceiro < 1:
+            if resetPontostres == 1:
+                placarPlayertres = placarPlayertres - placarPlayertres
+                placarComputadortres = placarComputadortres - placarComputadortres
+                resetPontostres = resetPontostres - 1
+            print("Digite 1 para pedra, 2 para papel ou 3 para tesoura.")
+            jogadorEscolhatres = \
+                int(input("Faça sua jogada. Pedra, papel ou tesoura? "))
+            computadorEscolhatres =\
+                (random.choice(jogadas))
+            time.sleep(3)
+            print("\n" * 130)
+            if jogadorEscolhatres == 1 and computadorEscolhatres == 3:
+                placarPlayertres = placarPlayertres + 1
+                print("\n" * 1)
+                print("Você escolheu Pedra e o computador escolheu tesoura.")
+                time.sleep(1)
+                print("\n" * 1)
+                print("Você venceu esta rodada;.")
+            elif jogadorEscolhatres == 1 and computadorEscolhatres == 2:
+                placarComputadortres = placarComputadortres + 1
+                print("\n" * 1)
+                print("Você escolheu Pedra e o computador escolheu papel.")
+                time.sleep(1)
+                print("\n" * 1)
+                print("O computador venceu esta rodada.")
+            elif jogadorEscolhatres == 1 and computadorEscolhatres == 1:
+                print("\n" * 1)
+                print("Você escolheu Pedra e o computador escolheu Pedra.")
+                time.sleep(1)
+                print("\n" * 1)
+                print("EMPATE!")
+            elif jogadorEscolhatres == 3 and computadorEscolhatres == 3:
+                print("\n" * 1)
+                print("Você escolheu Tesoura e o computador escolheu Tesoura.")
+                time.sleep(1)
+                print("\n" * 1)
+                print("EMPATE!")
+            elif jogadorEscolhatres == 3 and computadorEscolhatres == 2:
+                placarPlayertres = placarPlayertres + 1
+                print("\n" * 1)
+                print("Você escolheu Tesoura e o computador escolheu Papel.")
+                time.sleep(1)
+                print("\n" * 1)
+                print("Você venceu esta rodada.")
+            elif jogadorEscolhatres == 3 and computadorEscolhatres == 1:
+                placarComputadortres = placarComputadortres + 1
+                print("\n" * 1)
+                print("Você escolheu Tesoura e o computador escolheu Pedra.")
+                time.sleep(1)
+                print("\n" * 1)
+                print("O computador venceu esta rodada.")
+            elif jogadorEscolhatres == 2 and computadorEscolhatres == 2:
+                print("\n" * 1)
+                print("Você escolheu Papel e o computador escolheu Papel.")
+                time.sleep(1)
+                print("\n" * 1)
+                print("EMPATE!")
+            elif jogadorEscolhatres == 2 and computadorEscolhatres == 1:
+                placarPlayertres = placarPlayertres + 1
+                print("\n" * 1)
+                print("Você escolheu Papel e o computador escolheu Pedra.")
+                time.sleep(1)
+                print("\n" * 1)
+                print("Você venceu esta rodada.")
+            elif jogadorEscolhatres == 2 and computadorEscolhatres == 3:
+                placarComputadortres = placarComputadortres + 1
+                print("\n" * 1)
+                print("Você escolheu Papel e o computador escolheu Tesoura.")
+                time.sleep(1)
+                print("\n" * 1)
+                print("O computador venceu esta rodada.")
+            time.sleep(3)
+            print("\n" * 130)
+            print("Atualmente, a pontuação é: [Player = " + str(placarPlayertres) + "] e [Computador = " + str(placarComputadortres) + "]")
+            time.sleep(3)
+            if placarPlayertres >= 3 and placarComputadortres <= (placarPlayertres - 2):
+                resetPontostres = resetPontostres + 1
+                vitoriasP = vitoriasP + 1
+                time.sleep(1)
+                print("\n" * 1)
+                print("Você venceu este game.")
+                modEscolhatres =\
+                    int(input("Pressione 1 para encerrar e escolher outra modalidade ou 2 para continuar o game atual."))
+                if modEscolhatres == 1:
+                    contadorTerceiro = contadorTerceiro + 1
+                    time.sleep(3)
+                    print("\n" * 130)
+                if modEscolhatres == 2:
+                    time.sleep(3)
+                    print("\n" * 130)
+                    if vitoriasP <= 1 and vitoriasC <= 1:
+                        print("[Player = " + str(vitoriasP) + " vitória.]")
+                        print("[Computador = " + str(vitoriasC) + " vitória.]")
+                    elif vitoriasP > 1 and vitoriasC <= 1:
+                        print("[Player = " + str(vitoriasP) + " vitórias.]")
+                        print("[Computador = " + str(vitoriasC) + " vitória.]")
+                    elif vitoriasP <= 1 and vitoriasC > 1:
+                        print("[Player = " + str(vitoriasP) + " vitória.]")
+                        print("[Computador = " + str(vitoriasC) + " vitórias.]")
+                    elif vitoriasA > 1 and vitoriasB > 1:
+                        print("[Player = " + str(vitoriasP) + " vitórias.]")
+                        print("[Computador = " + str(vitoriasC) + " vitórias.]")
+            if placarComputadortres >= 3 and placarPlayertres <= (placarComputadortres - 2):
+                resetPontostres = resetPontostres + 1
+                vitoriasC = vitoriasC + 1
+                time.sleep(1)
+                print("\n" * 1)
+                print("Computador venceu este game.")
+                modEscolhatres =\
+                    int(input("Pressione 1 para encerrar e escolher outra modalidade ou 2 para continuar o game atual."))
+                if modEscolhatres == 1:
+                    contadorTerceiro = contadorTerceiro + 1
+                    time.sleep(3)
+                    print("\n" * 130)
+                if modEscolhatres == 2:
+                    time.sleep(3)
+                    print("\n" * 130)
+                    if vitoriasP <= 1 and vitoriasC <= 1:
+                        print("[Player = " + str(vitoriasP) + " vitória.]")
+                        print("[Computador = " + str(vitoriasC) + " vitória.]")
+                    elif vitoriasP > 1 and vitoriasC <= 1:
+                        print("[Player = " + str(vitoriasP) + " vitórias.]")
+                        print("[Computador = " + str(vitoriasC) + " vitória.]")
+                    elif vitoriasP <= 1 and vitoriasC > 1:
+                        print("[Player = " + str(vitoriasP) + " vitória.]")
+                        print("[Computador = " + str(vitoriasC) + " vitórias.]")
+                    elif vitoriasA > 1 and vitoriasB > 1:
+                        print("[Player = " + str(vitoriasP) + " vitórias.]")
+                        print("[Computador = " + str(vitoriasC) + " vitórias.]")
                 placarJogadordois = placarJogadordois + 1
                 print("\n" * 1)
                 print(namePlayerum + " escolheu pedra e " + namePlayerdois + " escolheu papel.")
